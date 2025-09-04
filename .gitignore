@@ -1,0 +1,22 @@
+# Python-generated files
+.python-version
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# UV python manager
+pyproject.toml
+uv.lock
+
+# Virtual environments
+.venv
+
+# .env
+.env
+
+# Local download folders
+cookies/*
+downloads/*

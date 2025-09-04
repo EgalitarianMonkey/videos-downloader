@@ -1,0 +1,12 @@
+services:
+  video-downloader:
+    build: .
+    env_file: .env
+    ports:
+      - "${PORT:-8510}:8501"
+    # chemins "génériques" — valeurs par défaut utiles en dev
+    volumes:
+      - "${VIDEOS_DIR:-./downloads}:/data/Videos"
+      - "${TMP_DIR:-./tmp}:/data/tmp"
+      - "${COOKIES_FILE:-./cookies/youtube_cookies.txt}:/config/youtube_cookies.txt"
+    restart: unless-stopped
